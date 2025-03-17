@@ -1,0 +1,81 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+body {
+  background-color: hsl(var(--background));
+  color: hsl(var(--foreground));
+}
+@layer base {
+  :root {
+    --background: 260 85% 5%;
+    --foreground: 280 90% 98%;
+    --card: 260 85% 7%;
+    --card-foreground: 280 90% 98%;
+    --popover: 260 85% 7%;
+    --popover-foreground: 280 90% 98%;
+    --primary: 326 100% 60%;
+    --primary-foreground: 280 90% 98%;
+    --secondary: 266 100% 64%;
+    --secondary-foreground: 280 90% 98%;
+    --muted: 260 85% 15%;
+    --muted-foreground: 280 70% 80%;
+    --accent: 326 100% 60%;
+    --accent-foreground: 280 90% 98%;
+    --destructive: 0 100% 50%;
+    --destructive-foreground: 280 90% 98%;
+    --border: 260 85% 15%;
+    --input: 260 85% 15%;
+    --ring: 326 100% 60%;
+    --radius: 0.5rem;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+.hero-gradient {
+  background: linear-gradient(45deg, 
+    hsl(326, 100%, 60%) 0%,
+    hsl(266, 100%, 64%) 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.grid-background {
+  background-image: linear-gradient(rgba(42, 25, 89, 0.5) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(42, 25, 89, 0.5) 1px, transparent 1px);
+  background-size: 2rem 2rem;
+  background-position: center center;
+}
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+  100% { transform: translateY(0px); }
+}
+
+.floating {
+  animation: float 6s ease-in-out infinite;
+}
+
+.scroll-to-top {
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+}
+
+.scroll-to-top.visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+.blog-card-image {
+  transition: transform 0.3s ease;
+}
+
+.blog-card:hover .blog-card-image {
+  transform: scale(1.05);
+}
