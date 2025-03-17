@@ -18,11 +18,9 @@ export function Navbar() {
   const navItems = [
     { href: "/", label: "Home" },
     { href: "/about", label: "About" },
-    { href: "/#skills", label: "Skills" },
-    { href: "#projects", label: "Projects" },
+    { href: "/projects", label: "Projects" },
     { href: "/#contact", label: "Contact" },
   ];
-
 
   return (
     <nav className="fixed w-full z-50 bg-background/80 backdrop-blur-sm border-b border-border">
@@ -47,7 +45,7 @@ export function Navbar() {
                 {item.label}
               </Link>
             ))}
-           <ThemeSwitcher />
+            <ThemeSwitcher />
           </div>
 
           {/* Mobile Menu Button */}

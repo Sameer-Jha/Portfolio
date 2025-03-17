@@ -5,7 +5,15 @@ import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
 import { Button } from "@/components/ui/button";
 import { Navbar } from "@/components/navbar";
-import { Download, Briefcase, GraduationCap, Award, Star, Mail } from "lucide-react";
+import Footer from "@/components/footer";
+import {
+  Download,
+  Briefcase,
+  GraduationCap,
+  Award,
+  Star,
+  Mail,
+} from "lucide-react";
 
 export default function About() {
   const experience = [
@@ -17,8 +25,8 @@ export default function About() {
         "Developed and maintained custom ABAP applications for enterprise clients",
         "Optimized SAP HANA database performance, reducing query execution time by 40%",
         "Implemented RESTful APIs for SAP integration with external systems",
-        "Led a team of 3 developers in modernizing legacy ABAP code"
-      ]
+        "Led a team of 3 developers in modernizing legacy ABAP code",
+      ],
     },
     {
       role: "Junior Software Developer",
@@ -27,9 +35,9 @@ export default function About() {
       responsibilities: [
         "Built automation scripts using Python for data processing workflows",
         "Developed full-stack web applications using React and Node.js",
-        "Collaborated with cross-functional teams on agile projects"
-      ]
-    }
+        "Collaborated with cross-functional teams on agile projects",
+      ],
+    },
   ];
 
   const education = [
@@ -40,23 +48,23 @@ export default function About() {
       achievements: [
         "First Class Honours",
         "Best Final Year Project Award",
-        "Technical Club President"
-      ]
-    }
+        "Technical Club President",
+      ],
+    },
   ];
 
   const certifications = [
     "SAP ABAP Development Associate",
     "SAP HANA 2.0 SPS05 Administration",
     "Python Professional Certification",
-    "AWS Cloud Practitioner"
+    "AWS Cloud Practitioner",
   ];
 
   const skills = {
-    sap: ["ABAP", "SAP HANA", "SAP Fiori", "SAP Gateway", "OData"],
+    SAP: ["ABAP", "SAP HANA", "SAP Fiori", "SAP Gateway", "OData"],
     programming: ["Python", "JavaScript", "TypeScript", "Node.js", "React"],
     databases: ["SAP HANA", "PostgreSQL", "MongoDB"],
-    tools: ["Git", "Docker", "Jenkins", "Jira"]
+    tools: ["Git", "Docker", "Jenkins", "Jira"],
   };
 
   return (
@@ -68,19 +76,27 @@ export default function About() {
           <Card className="p-8 mb-8 border-primary/20 bg-card/50 backdrop-blur-sm">
             <div className="flex flex-col md:flex-row gap-8 items-start">
               <div className="flex-grow">
-                <h1 className="text-4xl font-bold mb-4 hero-gradient">Sameer Jha</h1>
-                <h2 className="text-2xl text-foreground/90 mb-4">SAP ABAP & Full-Stack Developer</h2>
+                <h1 className="text-4xl font-bold mb-4 hero-gradient">
+                  Sameer Jha
+                </h1>
+                <h2 className="text-2xl text-foreground/90 mb-4">
+                  SAP ABAP & Full-Stack Developer
+                </h2>
                 <p className="text-muted-foreground mb-6">
-                  Experienced SAP ABAP developer with a strong foundation in modern web technologies.
-                  Passionate about creating efficient, scalable solutions that bridge enterprise systems
-                  with contemporary development practices.
+                  Experienced SAP ABAP developer with a strong foundation in
+                  modern web technologies. Passionate about creating efficient,
+                  scalable solutions that bridge enterprise systems with
+                  contemporary development practices.
                 </p>
                 <div className="flex w-1/2 md:w-full mx-auto gap-4 mt-4 md:flex-row flex-col">
                   <Button className="bg-primary hover:bg-primary/90">
                     <Mail className="mr-2 h-4 w-4" />
                     Contact Me
                   </Button>
-                  <Button variant="outline" className="border-primary text-primary hover:bg-primary/10">
+                  <Button
+                    variant="outline"
+                    className="border-primary text-primary hover:bg-primary/10"
+                  >
                     <Download className="mr-2 h-4 w-4" />
                     Download CV
                   </Button>
@@ -90,8 +106,8 @@ export default function About() {
                 <Card className="p-4 border-primary/20 bg-card/50">
                   <h3 className="font-semibold mb-2">Contact Information</h3>
                   <div className="text-sm text-muted-foreground">
-                    <p>📍 New Delhi, India</p>
-                    <p>📧 sameer.jha@example.com</p>
+                    <p>📍 Pune, India</p>
+                    <p>📧 sameer.jha@capgemini.com</p>
                     <p>🌐 github.com/sameerjha</p>
                     <p>💼 linkedin.com/in/sameerjha</p>
                   </div>
@@ -104,11 +120,16 @@ export default function About() {
           <section className="mb-8">
             <div className="flex items-center gap-2 mb-6">
               <Briefcase className="h-6 w-6 text-primary" />
-              <h2 className="text-2xl font-bold hero-gradient">Professional Experience</h2>
+              <h2 className="text-2xl font-bold hero-gradient">
+                Professional Experience
+              </h2>
             </div>
             <div className="space-y-6">
               {experience.map((job, index) => (
-                <Card key={index} className="p-6 border-primary/20 bg-card/50 backdrop-blur-sm">
+                <Card
+                  key={index}
+                  className="p-6 border-primary/20 bg-card/50 backdrop-blur-sm"
+                >
                   <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
                     <div>
                       <h3 className="text-xl font-semibold">{job.role}</h3>
@@ -135,7 +156,10 @@ export default function About() {
               <h2 className="text-2xl font-bold hero-gradient">Education</h2>
             </div>
             {education.map((edu, index) => (
-              <Card key={index} className="p-6 border-primary/20 bg-card/50 backdrop-blur-sm">
+              <Card
+                key={index}
+                className="p-6 border-primary/20 bg-card/50 backdrop-blur-sm"
+              >
                 <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
                   <div>
                     <h3 className="text-xl font-semibold">{edu.degree}</h3>
@@ -158,16 +182,24 @@ export default function About() {
           <section className="mb-8">
             <div className="flex items-center gap-2 mb-6">
               <Star className="h-6 w-6 text-primary" />
-              <h2 className="text-2xl font-bold hero-gradient">Technical Skills</h2>
+              <h2 className="text-2xl font-bold hero-gradient">
+                Technical Skills
+              </h2>
             </div>
             <Card className="p-6 border-primary/20 bg-card/50 backdrop-blur-sm">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 {Object.entries(skills).map(([category, items]) => (
                   <div key={category}>
-                    <h3 className="text-lg font-semibold capitalize mb-3">{category}</h3>
+                    <h3 className="text-lg font-semibold capitalize mb-3">
+                      {category}
+                    </h3>
                     <div className="flex flex-wrap gap-2">
                       {items.map((skill) => (
-                        <Badge key={skill} variant="secondary" className="bg-secondary/20">
+                        <Badge
+                          key={skill}
+                          variant="secondary"
+                          className="bg-secondary/20"
+                        >
                           {skill}
                         </Badge>
                       ))}
@@ -182,13 +214,17 @@ export default function About() {
           <section>
             <div className="flex items-center gap-2 mb-6">
               <Award className="h-6 w-6 text-primary" />
-              <h2 className="text-2xl font-bold hero-gradient">Certifications</h2>
+              <h2 className="text-2xl font-bold hero-gradient">
+                Certifications
+              </h2>
             </div>
             <Card className="p-6 border-primary/20 bg-card/50 backdrop-blur-sm">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 {certifications.map((cert, index) => (
                   <div key={index} className="flex items-center gap-2">
-                    <Badge className="bg-primary/20 text-primary">{index + 1}</Badge>
+                    <Badge className="bg-primary/20 text-primary">
+                      {index + 1}
+                    </Badge>
                     <span>{cert}</span>
                   </div>
                 ))}
@@ -197,6 +233,8 @@ export default function About() {
           </section>
         </div>
       </main>
+      {/* Footer */}
+      <Footer />
     </>
   );
 }
